@@ -1,0 +1,34 @@
+# Ignore target directory (build outputs)
+target/
+
+# Ignore JavaFX SDK folder
+javafx-sdk-23.0.1/
+
+# Ignore Maven’s generated files
+.mvn/
+pom.xml.user
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore IDE-specific files (for IntelliJ IDEA, Eclipse, etc.)
+.idea/
+*.iml
+.vscode/
+
+# Ignore Maven wrapper files (if you use it)
+.mvnw
+.mvnw.cmd
+
+# Ignore sensitive configuration file
+# Database_config.json
+
+# Ignore . app_cache directory 
+.app_cache
+
+# Ignore Tests_screenshoots 
+Tests_screenshoots

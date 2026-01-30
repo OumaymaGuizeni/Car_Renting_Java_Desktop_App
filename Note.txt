@@ -1,0 +1,26 @@
+in bashrc file specifie javafx lib --> export PATH_TO_FX=/path/to/javafx-sdk/lib
+
+
+Next Steps:
+
+    On Your Host Machine: Before running the Docker container, make sure your X server is running and allow Docker containers to access it.
+
+    On Linux:
+
+sudo apt-get install x11-xserver-utils
+
+xhost +local:docker
+
+This command allows local Docker containers to access your X server.
+
+Build the Docker Image: After updating the Dockerfile, you can rebuild the Docker image:
+
+docker build -t my-javafx-app .
+
+Run the Docker Container: To run the container and display the GUI, execute the following:
+
+docker run -e DISPLAY=$DISPLAY --rm my-javafx-app
+
+
+
+sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-good gstreamer1.0-plugins-bad ffmpeg
