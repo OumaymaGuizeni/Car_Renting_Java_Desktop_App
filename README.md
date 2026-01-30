@@ -34,7 +34,7 @@ Installation
 
     bash
 
-git clone https://github.com/your-repository/manager-renting-car-agency.git
+git clone https://github.com/OumaymaGuizeni/Car_Renting_Java_Desktop_App.git
 cd manager-renting-car-agency
 
 Build the project:
