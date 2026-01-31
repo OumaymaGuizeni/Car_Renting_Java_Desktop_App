@@ -1,0 +1,138 @@
+/* General Button Style */
+.button {
+    -fx-font-size: 16px;
+    -fx-padding: 12px 25px;           /* Increased padding for more space */
+    -fx-background-radius: 20px;      /* More rounded corners */
+    -fx-border-radius: 20px;          /* Border rounding */
+    -fx-text-fill: white;             /* Text color */
+    -fx-font-weight: bold;
+    -fx-cursor: hand;                 /* Makes the cursor a hand pointer when hovering */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 10);  /* Larger shadow */
+    -fx-transition: all 0.3s ease-in-out;  /* Smooth transition */
+}
+
+/* General Button Hover Effect */
+.button:hover {
+    -fx-background-color: #388E3C;   /* Slightly darker green for all buttons on hover */
+    -fx-scale-x: 1.1;                 /* Scale effect for hover */
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 10); /* Stronger shadow */
+    -fx-translate-y: -3px;            /* Lift the button on hover */
+}
+
+/* Manage Cars Button (Green) */
+#MangingCars {
+    -fx-background-color: #4CAF50;   /* Original green color */
+}
+
+#MangingCars:hover {
+    -fx-background-color: #388E3C;   /* Slightly darker green on hover */
+}
+
+/* Manage Hotels Button (Green) */
+#MangeHotels {
+    -fx-background-color: #4CAF50;
+}
+
+#MangeHotels:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Manage Flights Button (Green) */
+#ManageFlights {
+    -fx-background-color: #4CAF50;
+}
+
+#ManageFlights:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Manage Special Offers Button (Green) */
+#Mangespecialoffers {
+    -fx-background-color: #4CAF50;
+}
+
+#Mangespecialoffers:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Manage Users Button (Green) */
+#MangeUsers {
+    -fx-background-color: #4CAF50;
+}
+
+#MangeUsers:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Manage Houses Button (Green) */
+#MangeHouses {
+    -fx-background-color: #4CAF50;
+}
+
+#MangeHouses:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Manage Reservations Button (Green) */
+#MangeReservations {
+    -fx-background-color: #4CAF50;
+}
+
+#MangeReservations:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Exit Button (Red) */
+#ExitButton {
+    -fx-background-color: rgb(236, 96, 108);
+}
+
+#ExitButton:hover {
+    -fx-background-color: rgb(204, 76, 91);  /* Darker red on hover */
+    -fx-scale-x: 1.1;   /* Increase size on hover */
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.25), 10, 0, 0, 10); /* Stronger red shadow */
+    -fx-translate-y: -3px;
+}
+
+/* Logout Admin Button (Blue) */
+#handleLogoutAdmin {
+    -fx-background-color: rgb(106, 152, 221);
+}
+
+#handleLogoutAdmin:hover {
+    -fx-background-color: rgb(85, 122, 175);  /* Darker blue on hover */
+    -fx-scale-x: 1.1;   /* Increase size on hover */
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(41, 182, 246, 0.4), 12, 0, 0, 15); /* Stronger blue shadow */
+    -fx-translate-y: -3px;
+}
+
+/* Help Button (Transparent with Icon) */
+#helpButton {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-padding: 8px;  /* Increased padding for better fit */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3); /* Soft shadow */
+}
+
+#helpButton:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1);  /* Light background on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Slightly stronger shadow on hover */
+}
+
+/* Help Icon Image */
+#helpImage {
+    -fx-opacity: 0.7;
+}
+
+#helpButton:hover #helpImage {
+    -fx-opacity: 1;  /* Full opacity on hover */
+}
+
+/* Common Shadow Effect for all Buttons */
+.button {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+}

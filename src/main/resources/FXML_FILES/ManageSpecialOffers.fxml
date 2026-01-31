@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.Admin_controllers.ManageSpecialOffersController"
+      spacing="20" alignment="CENTER" prefWidth="800" prefHeight="600" stylesheets="@styles/styles.css" styleClass="root">
+
+    <!-- Header Section -->
+    <Label text="Manage Special Offers" styleClass="header-label" />
+
+    <!-- Form Section -->
+    <GridPane hgap="20" vgap="15" alignment="CENTER" styleClass="form-container">
+        <Label text="Offer Name:" styleClass="form-label" />
+        <TextField fx:id="offerNameField" GridPane.columnIndex="1" styleClass="form-input" />
+
+        <Label text="Discount (%):" GridPane.rowIndex="1" styleClass="form-label" />
+        <TextField fx:id="discountField" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="form-input" />
+
+        <Label text="Start Date:" GridPane.rowIndex="2" styleClass="form-label" />
+        <DatePicker fx:id="startDatePicker" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="form-input" />
+
+        <Label text="End Date:" GridPane.rowIndex="3" styleClass="form-label" />
+        <DatePicker fx:id="endDatePicker" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="form-input" />
+
+        <Label text="Item 1:" GridPane.rowIndex="4" styleClass="form-label" />
+        <ComboBox fx:id="item1" GridPane.rowIndex="4" GridPane.columnIndex="1" promptText="Item 1" styleClass="form-input" />
+
+        <Label text="Choose Offer 1:" GridPane.rowIndex="4" GridPane.columnIndex="2" styleClass="form-label" />
+        <ComboBox fx:id="ChooseOffer1" GridPane.rowIndex="4" GridPane.columnIndex="3" promptText="Choose offer 1" styleClass="form-input" />
+
+        <Label text="Item 2:" GridPane.rowIndex="5" styleClass="form-label" />
+        <ComboBox fx:id="item2" GridPane.rowIndex="5" GridPane.columnIndex="1" promptText="Item 2" styleClass="form-input" />
+
+        <Label text="Choose Offer 2:" GridPane.rowIndex="5" GridPane.columnIndex="2" styleClass="form-label" />
+        <ComboBox fx:id="Chooseoffer2" GridPane.rowIndex="5" GridPane.columnIndex="3" promptText="Choose offer 2" styleClass="form-input" />
+    </GridPane>
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER" styleClass="button-container">
+        <Button text="Add Offer" fx:id="addOfferButton" onAction="#handleAddOffer" styleClass="add-button" />
+        <Button text="View Current Offers" fx:id="viewCurrentOffersButton" onAction="#handleViewCurrentOffers" styleClass="update-button" />
+        <Button text="Back" fx:id="back" onAction="#BACK" styleClass="back-button" />
+        <Button text="Logout" fx:id="logoutButton" onAction="#handleLogout" styleClass="danger-button" />
+
+
+    </HBox>
+
+</VBox>

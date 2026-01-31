@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" style="-fx-background-image: url('/src/Background.png')" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User_controllers.HotelReservationHistory" stylesheets="@styles/hotelreservationhistorystyle.css">
+    
+    <!-- Top Panel with Logos -->
+    <AnchorPane prefHeight="68.0" prefWidth="900.0" layoutY="0.0">
+        <children>
+            <!-- Logo on the Left -->
+            <ImageView fitHeight="59.0" fitWidth="139.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../src/logo.png" />
+                </image>
+            </ImageView>
+            
+            <!-- Logo on the Right -->
+            <ImageView fitHeight="59.0" fitWidth="118.0" layoutX="827.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../src/hotel.png" />
+                </image>
+            </ImageView>
+        </children>
+    </AnchorPane>
+
+    <!-- Table for displaying reservations -->
+    <TableView fx:id="Tablereservation" layoutX="69.0" layoutY="176.0" prefHeight="393.0" prefWidth="765.0">
+        <columns>
+            <!-- Column for Type of Reservation -->
+            <TableColumn fx:id="Type_Reservation" prefWidth="150" text="Type of Reservation" />
+            <!-- Column for Start Date -->
+            <TableColumn fx:id="Start_Date" prefWidth="150" text="Start Date" />
+            <!-- Column for End Date -->
+            <TableColumn fx:id="End_Date" prefWidth="150" text="End Date" />
+            <!-- Column for Total Cost -->
+            <TableColumn fx:id="TotaleCost" prefWidth="150" text="Total Cost" />
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button fx:id="backbutton" onAction="#backClicked" layoutX="70.0" layoutY="600.0" prefHeight="30.0" prefWidth="100.0" text="Back" /> 
+    <Button fx:id="loadreservation" text="Load Reservations" onAction="#loadReservationsButtonClicked" layoutX="200.0" layoutY="600.0" prefHeight="30.0" prefWidth="250.0" />
+</AnchorPane>

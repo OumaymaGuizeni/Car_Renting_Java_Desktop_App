@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ManageHotelsController" stylesheets="@styles/manage_hotels_style.css">
+
+    <!-- Background Image -->
+    <ImageView fitHeight="2500.0" fitWidth="2600.0" layoutX="0.0" layoutY="0.0" preserveRatio="false">
+        <image>
+            <Image url="@/src/Background.png" />
+        </image>
+    </ImageView> 
+    
+    <!-- Logo Image -->
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png" />
+        </image>
+    </ImageView>
+    <!-- Title -->
+    <Label layoutX="280.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Manage Hotels" />
+
+    <!-- Main Layout -->
+    <VBox layoutX="50.0" layoutY="100.0" spacing="20.0">
+        <children>
+            <!-- Form Section -->
+            <GridPane hgap="10.0" vgap="10.0">
+                <children>
+                    <!-- Hotel ID -->
+                    <Label style="-fx-font-size: 14px;" text="Hotel ID:" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtHotelID" prefWidth="100.0" promptText="Enter Hotel ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- Hotel Name -->
+                    <Label style="-fx-font-size: 14px;" text="Hotel Name:" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtName" prefWidth="100.0" promptText="Enter Hotel Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Location -->
+                    <Label style="-fx-font-size: 14px;" text="Location:" GridPane.rowIndex="2" />
+                    <TextField fx:id="txtLocation" prefWidth="250.0" promptText="Enter Hotel Location" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Rooms Available -->
+                    <Label style="-fx-font-size: 14px;" text="Rooms Available:" GridPane.rowIndex="3" />
+                    <TextField fx:id="txtRoomsAvailable" prefWidth="250.0" promptText="Enter Rooms Available" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Price Per Night -->
+                    <Label style="-fx-font-size: 14px;" text="Price Per Night:" GridPane.rowIndex="4" />
+                    <TextField fx:id="txtPricePerNight" prefWidth="250.0" promptText="Enter Price Per Night" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Full Capacity -->
+                    <Label style="-fx-font-size: 14px;" text="Full Capacity:" GridPane.rowIndex="5" />
+                    <TextField fx:id="txtFull_capacity" prefWidth="250.0" promptText="Enter Hotel Full Capacity" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <!-- Reserved by our agency -->
+                    <Label style="-fx-font-size: 14px;" text="Reserved by our agency:" GridPane.rowIndex="6" />
+                    <TextField fx:id="txtreserved_by_our_agency" prefWidth="250.0" promptText="Enter Rooms Reserved by our agency" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <!-- ComboBox for Available Hotels -->
+                    <Label style="-fx-font-size: 14px;" text="Available Hotels:" GridPane.rowIndex="9" />
+                    <ComboBox fx:id="comboBoxHotels" onAction="#onHotelSelectionChanged" prefWidth="250.0" promptText="Select Hotel" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+               <Label prefHeight="16.0" prefWidth="147.0" text="Hotel Image URL" GridPane.rowIndex="7" />
+               <TextField fx:id="txthotelimageurl" prefWidth="250.0" promptText="Enter Hotel Image URL" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               <TextField fx:id="txthotelStars" prefWidth="250.0" promptText="Enter Hotel Stars" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               <Label prefHeight="16.0" prefWidth="147.0" text="Hotel Stars" GridPane.rowIndex="8" />
+                </children>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <!-- Buttons Section -->
+                  <AnchorPane>
+                     <!-- Bouton 1: Add Hotel -->
+                     <Button fx:id="addHotel" layoutX="10.0" layoutY="30.0" onAction="#addHotel" prefWidth="150.0" style="-fx-background-color:#4CAF50; -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Add Hotel" />
+
+                     <!-- Bouton 4: Show All Hotels -->
+                     <Button fx:id="showhotels" layoutX="231.0" layoutY="30.0" onAction="#showhotels" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Show all Hotels" />
+
+
+
+                     <!-- Bouton 5: Back -->
+                     <Button fx:id="BACK" layoutX="10.0" layoutY="87.0" onAction="#BACK" prefWidth="150.0" style="-fx-background-color:rgb(12, 173, 236); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Back" />
+
+                     <!-- Bouton 6: Logout Admin -->
+                     <Button fx:id="handleLogout" layoutX="231.0" layoutY="87.0" onAction="#handleLogout" prefWidth="200.0" style="-fx-background-color:rgb(230, 55, 49); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Logout Admin" />
+                 
+                 
+                 
+
+                  </AnchorPane>
+
+        </children>
+    </VBox>
+
+    <!-- Bottom Section: Notification or status message -->
+    <Label fx:id="statusMessage" layoutX="20.0" layoutY="550.0" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+   <ImageView fx:id="hotelImageView" fitHeight="290.0" fitWidth="330.0" layoutX="540.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+   <HBox fx:id="starsContainer" layoutX="540.0" layoutY="420.0" prefHeight="60.0" prefWidth="330.0" />
+</AnchorPane>

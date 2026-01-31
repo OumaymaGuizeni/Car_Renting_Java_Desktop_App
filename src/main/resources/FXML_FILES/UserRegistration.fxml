@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User_controllers.CreateUserController"  stylesheets="@styles/Userregistrationstyle.css">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #e8763c;">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="165.0" layoutX="31.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="150.0" layoutX="823.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/user_registration.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="302.0" layoutY="31.0" text="User Registration">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="30.0" layoutY="150.0" text="FirstName">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="220.0" layoutY="150.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter first name" />
+      <Label layoutX="30.0" layoutY="200.0" text="LastName">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrenom" layoutX="220.0" layoutY="200.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter last name" />
+      <Label layoutX="30.0" layoutY="250.0" text="Adress">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="220.0" layoutY="250.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter address" />
+      <Label layoutX="30.0" layoutY="300.0" text="Email">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="220.0" layoutY="300.0" prefHeight="25.0" prefWidth="336.0" promptText="Enter email" />
+      <Label layoutX="30.0" layoutY="350.0" text="Password">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="400.0" text="ConfirmPassword">
+         <font>
+            <Font name="Noto Sans Mono CJK HK" size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtCIN" layoutX="220.0" layoutY="350.0" prefHeight="25.0" prefWidth="334.0" promptText="Enter Password" />
+      <PasswordField fx:id="ConfirmePassword" layoutX="220.0" layoutY="400.0" prefHeight="25.0" prefWidth="334.0" promptText="Confirme Password" />
+      <AnchorPane layoutX="623.0" layoutY="150.0" prefHeight="300.0" prefWidth="250.0" style="-fx-background-color: #cef5de;">
+         <children>
+            <Label layoutX="60.0" layoutY="73.0" text="Your Location">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id ="openMapButton" onAction="#handleOpenMapButton" style="-fx-background-color: transparent; -fx-border-width: 0;">
+               <graphic>
+                  <ImageView fx:id="helpImage" fitHeight="50.0" fitWidth="230.0" layoutX="50.0" layoutY="50.0" preserveRatio="true">
+                        <image>
+                           <Image url="@/src/google-maps.png" />
+                        </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="101.0" layoutY="116.0" text="Timezone">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="163.0" text="Latitude">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="218.0" text="Longitude">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="timezoneLabel" layoutX="98.0" layoutY="140.0" prefHeight="19.0" prefWidth="54.0">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="latLabel" layoutX="98.0" layoutY="191.0" prefHeight="19.0" prefWidth="54.0">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lonLabel" layoutX="98.0" layoutY="248.0" prefHeight="19.0" prefWidth="54.0">
+               <font>
+                  <Font name="Noto Sans Mono CJK HK" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="CreateAccount" layoutX="220.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleCreateUser" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #07a30c;" text="Create New Account" />
+      <Button fx:id="EXIT" layoutX="456.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #fc1c32;" text="EXIT" />
+   </children>
+</AnchorPane>

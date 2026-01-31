@@ -1,0 +1,39 @@
+/* General Styles */
+.header-box {
+    -fx-alignment: center-left;
+    -fx-spacing: 20;
+}
+.header-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.input-box, .output-box, .image-box {
+    -fx-border-color: gray;
+    -fx-border-width: 2;
+    -fx-padding: 10;
+}
+.input-box {
+    -fx-spacing: 10;
+}
+.output-box {
+    -fx-spacing: 10;
+}
+.image-box {
+    -fx-alignment: center;
+}
+
+/* Button Styles */
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.button-blue {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}

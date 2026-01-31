@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?> <!-- Correction de l'import pour Image -->
+<?import javafx.scene.image.ImageView?> <!-- Correction de l'import pour ImageView -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.Admin_controllers.ShowUsersController">
+   <children>
+      <!-- Background Image -->
+      <ImageView fitHeight="2500.0" fitWidth="2600.0" preserveRatio="false" layoutX="0.0" layoutY="0.0">
+         <image>
+            <Image url="@/src/Background.png" /> <!-- Correction du chemin de l'image -->
+         </image>
+      </ImageView> 
+
+      <!-- Logo -->
+      <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@/src/logo.png"/> <!-- Correction du chemin de l'image -->
+         </image>
+      </ImageView> 
+
+      <!-- Label -->
+      <Label fx:id="LabelNom" text="" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="150.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+      <!-- Table -->
+      <TableView fx:id="TableID" layoutX="75.0" layoutY="75.0" prefHeight="500.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="ColumnID" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="ColumnNom" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="ColumnPrenom" prefWidth="100.0" text="First Name" />
+            <TableColumn fx:id="ColumnCin" prefWidth="100.0" text="CIN" />
+            <TableColumn fx:id="ColumnAddress" prefWidth="100.0" text="ADDRESS" />
+            <TableColumn fx:id="ColumnEmail" prefWidth="100.0" text="EMAIL" />
+         </columns>
+      </TableView>
+
+      <!-- Buttons -->
+      <Button layoutX="125.0" layoutY="600.0" mnemonicParsing="false" text="Back" prefWidth="85.0" onAction="#BACK" 
+              style="-fx-font-size: 16px; -fx-background-color: rgb(106, 152, 221); -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+      <Button layoutX="650.0" layoutY="600.0" mnemonicParsing="false" text="Exit" prefWidth="85.0" onAction="#handleExit" 
+              style="-fx-font-size: 16px; -fx-background-color: #f44336; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+      <Button layoutX="350.0" layoutY="600.0" mnemonicParsing="false" text="Export as PDF" prefWidth="150.0" onAction="#handleExportPdf" 
+              style="-fx-font-size: 16px; -fx-background-color: rgb(241, 169, 14); -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+
+      <!-- Help Button -->
+      <Button fx:id="helpButton" onAction="#handleHelp" style="-fx-background-color: transparent; -fx-border-width: 0;" 
+              AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <graphic>
+            <ImageView fx:id="helpImage" fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+               <image>
+                  <Image url="@/src/help_icon.png" /> <!-- Correction du chemin de l'image -->
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <!-- About Button -->
+      <Button fx:id="helpContactButton" onAction="#AboutMyBooking" style="-fx-background-color: transparent; -fx-border-width: 0;" 
+              AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+               <image>
+                  <Image url="@/src/information.png" /> <!-- Correction du chemin de l'image -->
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+       <ImageView fx:id="logoImage" fitHeight="125.0" fitWidth="125.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png" />
+        </image>
+    </ImageView>
+</AnchorPane>

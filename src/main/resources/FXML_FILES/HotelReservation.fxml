@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" stylesheets="@styles/HotelReservationstyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User_controllers.HotelReservationController">
+    <children>
+         <!-- Background Image -->
+        <ImageView fx:id="backgroundImage" fitHeight="800.0" fitWidth="1000.0" layoutX="0.0" layoutY="0.0" preserveRatio="false">
+            <image>
+                <Image url="@../src/Background.png" />
+            </image>
+        </ImageView>
+
+        <!-- Header -->
+        <HBox layoutX="15.0" layoutY="15.0" spacing="20.0" styleClass="header-box">
+            <ImageView fitHeight="60.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../src/logo.png" />
+                </image>
+            </ImageView>
+            <Label styleClass="header-title" text="Hotel Reservation" />
+        </HBox>
+
+        <!-- Input Fields Section -->
+        <VBox layoutX="15.0" layoutY="100.0" prefHeight="261.0" prefWidth="388.0" spacing="10.0" styleClass="input-box">
+            <Label styleClass="section-title" text="Input Fields" />
+            <HBox spacing="10.0">
+                <Label text="Hotel:" />
+                <ComboBox fx:id="HotelSelectionComboBox" onAction="#onHotelSelectionChanged" promptText="Select a Hotel" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Start Date:" />
+                <DatePicker fx:id="DateStartHotelReservation" promptText="Start Date" onAction="#DateStartHotelReservation"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="End Date:" />
+                <DatePicker fx:id="DateFinHotelReservation" promptText="End Date" onAction="#DateFinHotelReservation"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Rooms:" />
+                <TextField fx:id="txtnumberofrooms" promptText="Number of Rooms" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Payment Type:" />
+                <ComboBox fx:id="PaymentTypeComboBox" promptText="Payment Type" />
+            </HBox>
+        </VBox>
+
+        <!-- Output Fields Section -->
+        <VBox layoutX="15.0" layoutY="400.0" prefWidth="400.0" spacing="10.0" styleClass="output-box">
+            <Label styleClass="section-title" text="Output Changes" />
+            <Label fx:id="TotalePrice" text="Total Price: " />
+            <Label fx:id="NumberOfDate" text="Total Days: " />
+            <Label fx:id="totalrooms" text="Total Rooms: " />
+        </VBox>
+
+        <!-- Hotel Image Section -->
+        <VBox layoutX="450.0" layoutY="100.0" spacing="10.0" styleClass="image-box">
+            <Label styleClass="section-title" text="Hotel Overview" />
+            <ImageView fx:id="hotelImageView" fitHeight="322.0" fitWidth="420.0" preserveRatio="true" />
+        </VBox>
+
+        <!-- Buttons Section -->
+        <HBox layoutX="15.0" layoutY="630.0" spacing="20.0">
+            <Button fx:id="backButton" onAction="#BACKHOME" styleClass="button-green" text="Back to Home" />
+            <Button fx:id="bookHotelButton" onAction="#Reservehotel" styleClass="button-blue" text="Book Hotel" />
+            <Button fx:id="showmyReservations" onAction="#showmyReservations" styleClass="button-blue" text="My Reservations" />
+            <Button fx:id="logout" onAction="#logout" styleClass="button-green" text="Logout" />
+        </HBox>
+      <HBox fx:id="starsContainer" layoutX="462.0" layoutY="487.0" prefHeight="60.0" prefWidth="420.0" />
+    </children>
+</AnchorPane>

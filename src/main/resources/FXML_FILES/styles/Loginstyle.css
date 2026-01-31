@@ -1,0 +1,180 @@
+/* General Styles */
+* {
+    -fx-font-family: Arial, sans-serif;  /* Default font for all elements */
+    -fx-base: #f9f9f9;                    /* Base background color */
+}
+
+/* Background for the AnchorPane */
+AnchorPane {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Main GridPane Layout */
+#mainGridPane {
+    -fx-padding: 40px;
+    -fx-background-image: url('/src/Background.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #444;
+    -fx-font-size: 16px;
+}
+
+/* Welcome Label */
+#mainGridPane Label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555;
+}
+
+/* Email and Password Field Label */
+#txtEmail, #txtCin {
+    -fx-font-size: 16px;
+    -fx-text-fill: #444;
+}
+
+/* Weather Label */
+#weatherLabel {
+    -fx-font-size: 14px;
+    -fx-text-fill: #444;
+    -fx-padding: 10px;
+}
+
+/* TextField */
+.text-field, .password-field {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+}
+
+/* TextField Prompt */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* StackPane for PasswordField visibility toggle */
+StackPane {
+    -fx-padding: 5px;
+}
+
+/* CheckBox (for password visibility toggle) */
+#togglePasswordCheckbox {
+    -fx-font-size: 14px;
+    -fx-text-fill: #444;
+}
+
+/* Login Button */
+#loginButton {
+    -fx-font-size: 16px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+/* Create New User Button */
+#CreatUser {
+    -fx-font-size: 16px;
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+/* Exit Button */
+#Exit {
+    -fx-font-size: 16px;
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Help Buttons (Help, Contact) */
+#helpButton, #helpContactButton {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+#helpButton ImageView, #helpContactButton ImageView {
+    -fx-fit-height: 25px;
+    -fx-fit-width: 25px;
+    -fx-preserve-ratio: true;
+}
+
+/* Logo Image */
+#logoImage {
+    -fx-border-radius: 10px;
+}
+
+/* Speech Toggle CheckBox */
+#speechToggle {
+    -fx-font-size: 20px;
+    -fx-text-fill: #444;
+    -fx-background-color: #f5cef2;
+    -fx-padding: 10px;
+}
+
+/* MediaView */
+#mediaView {
+    -fx-border-radius: 10px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 2px;
+}
+
+/* Time Label */
+#timeLabel {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 10px;
+}
+
+/* GridPane: Styling for rows and columns */
+GridPane {
+    -fx-vgap: 20px;
+    -fx-hgap: 20px;
+}
+
+/* Adjust spacing for elements in the VBox (e.g. Login Form) */
+.VBox {
+    -fx-spacing: 20px;
+}
+
+/* Add additional margin to the VBox for left column (Email, Password, etc.) */
+.VBox#mainGridPane > VBox {
+    -fx-spacing: 20px;
+    -fx-padding: 10px;
+}
+
+/* Spacing between buttons */
+.HBox {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+}
+
+/* Bottom CheckBox Style */
+#speechToggle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333;
+    -fx-padding: 15px;
+}
+
+.button:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-cursor: hand; /* Change le curseur pour indiquer que c'est cliquable */
+    -fx-border-color: #2196F3; /* Optionnel : changer la bordure au survol */
+}

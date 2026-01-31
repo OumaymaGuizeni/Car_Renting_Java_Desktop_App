@@ -1,0 +1,125 @@
+/* General Button Style */
+.button {
+    -fx-font-size: 16px;
+    -fx-padding: 12px 25px;           /* Increased padding for more space */
+    -fx-background-radius: 20px;      /* More rounded corners */
+    -fx-border-radius: 20px;          /* Border rounding */
+    -fx-text-fill: white;             /* Text color */
+    -fx-font-weight: bold;
+    -fx-cursor: hand;                 /* Makes the cursor a hand pointer when hovering */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 10);  /* Larger shadow */
+    -fx-transition: all 0.3s ease-in-out;  /* Smooth transition */
+}
+
+/* General Button Hover Effect */
+.button:hover {
+    -fx-background-color: #388E3C;   /* Slightly darker green for all buttons on hover */
+    -fx-scale-x: 1.1;                 /* Scale effect for hover */
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 10); /* Stronger shadow */
+    -fx-translate-y: -3px;            /* Lift the button on hover */
+}
+
+/* Specific Button Styles for each button in the FXML */
+
+/* Add Hotel Button (Green) */
+#addHotel {
+    -fx-background-color: #4CAF50;
+}
+
+#addHotel:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Show All Hotels Button (Green) */
+#showhotels {
+    -fx-background-color: #4CAF50;
+}
+
+#showhotels:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Back Button (Blue) */
+#BACK {
+    -fx-background-color: rgb(12, 173, 236);
+}
+
+#BACK:hover {
+    -fx-background-color: rgb(10, 140, 204);  /* Slightly darker blue on hover */
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(41, 182, 246, 0.4), 12, 0, 0, 15); /* Stronger blue shadow */
+    -fx-translate-y: -3px;
+}
+
+/* Logout Admin Button (Red) */
+#handleLogout {
+    -fx-background-color: rgb(230, 55, 49);
+}
+
+#handleLogout:hover {
+    -fx-background-color: rgb(204, 40, 38);  /* Darker red on hover */
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.25), 10, 0, 0, 10); /* Stronger red shadow */
+    -fx-translate-y: -3px;
+}
+
+/* General ComboBox and TextField Styles */
+
+/* General Styling for TextFields */
+.text-field {
+    -fx-font-size: 12px;
+    -fx-padding: 5px 6px;
+    -fx-background-radius: 10px; /* Rounded corners for TextField */
+    -fx-border-radius: 10px;
+    -fx-border-color: #ccc; /* Light grey border */
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 5); /* Light shadow */
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.text-field:hover {
+    -fx-border-color: #388E3C;  /* Green border on hover */
+    -fx-scale-x: 1.05;           /* Slight scaling on hover */
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Stronger shadow on hover */
+}
+
+/* Focused TextField (when clicked or selected) */
+.text-field:focused {
+    -fx-border-color: #388E3C;  /* Focused green border */
+    -fx-background-color: #e8f5e9;  /* Light green background on focus */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 8); /* Strong shadow when focused */
+}
+
+/* General Styling for ComboBox */
+.combo-box {
+    -fx-font-size: 12px;
+    -fx-padding: 5px 6px;
+    -fx-background-radius: 10px; /* Rounded corners for ComboBox */
+    -fx-border-radius: 10px;
+    -fx-border-color: #ccc; /* Light grey border */
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 5); /* Light shadow */
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.combo-box:hover {
+    -fx-border-color: #388E3C;  /* Green border on hover */
+    -fx-scale-x: 1.05;           /* Slight scaling on hover */
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Stronger shadow on hover */
+}
+
+/* Focused ComboBox (when clicked or selected) */
+.combo-box:focused {
+    -fx-border-color: #388E3C;  /* Focused green border */
+    -fx-background-color: #e8f5e9;  /* Light green background on focus */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 8); /* Strong shadow when focused */
+}

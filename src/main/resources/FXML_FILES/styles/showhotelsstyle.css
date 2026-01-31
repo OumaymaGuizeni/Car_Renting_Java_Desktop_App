@@ -1,0 +1,108 @@
+/* General Button Style */
+.button {
+    -fx-font-size: 12px;                        /* Set font size for all buttons */
+    -fx-padding: 5px 6px;                       /* Padding */
+    -fx-background-color: rgb(12, 173, 236);    /* Default button color */
+    -fx-text-fill: white;                       /* Text color */
+    -fx-background-radius: 5px;                 /* Rounded corners */
+    -fx-border-radius: 5px;                     /* Border radius */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3); /* Soft shadow effect */
+    -fx-transition: all 0.3s ease-in-out;       /* Smooth transition for all states */
+}
+
+/* Button Hover Effect */
+.button:hover {
+    -fx-background-color: rgb(10, 150, 215);    /* Slightly darker blue on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Stronger shadow on hover */
+    -fx-translate-y: -3px;                      /* Lift the button */
+}
+
+/* Button Focused Effect */
+.button:focused {
+    -fx-background-color: rgb(9, 131, 191);     /* Even darker blue on focus */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 7); /* Stronger shadow on focus */
+}
+
+/* Specific Style for the 'Delete Selected Hotel' Button */
+#DeleteSelected_hotel {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: rgb(12, 173, 236);
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+/* Specific Style for the 'View Statistics' Button */
+#statsButton {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: rgb(12, 173, 236);
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+/* Specific Style for the 'Back' Button */
+#backButton {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: rgb(12, 173, 236);
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+/* Specific Style for the 'Export Data' Button */
+#Exportdata {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: rgb(12, 173, 236);
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+/* Specific Style for the 'Reset' Button */
+#clearSearchButton {
+    -fx-font-size: 12px;
+    -fx-padding: 5px 6px;
+    -fx-background-color: #4CAF50; /* Green color */
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Reset Button Hover Effect */
+#clearSearchButton:hover {
+    -fx-background-color: #388E3C; /* Darker green for hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5); /* Stronger shadow */
+    -fx-translate-y: -3px; /* Lift the button */
+}
+
+/* General ComboBox and TextField Style */
+.text-field, .combo-box {
+    -fx-font-size: 12px;                        /* Font size for text fields and combo boxes */
+    -fx-padding: 5px 6px;                       /* Padding */
+    -fx-background-radius: 5px;                 /* Rounded corners */
+    -fx-border-radius: 5px;                     /* Border rounding */
+    -fx-text-fill: black;                       /* Text color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 3); /* Soft shadow */
+    -fx-transition: all 0.3s ease-in-out;       /* Smooth transition */
+}
+
+/* TextField and ComboBox Focused State */
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #4CAF50;                  /* Green border when focused */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); /* Stronger shadow on focus */
+}
+
+/* TextField Hover Effect */
+.text-field:hover, .combo-box:hover {
+    -fx-background-color: #f0f0f0;              /* Light grey background on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 5); /* Soft shadow on hover */
+}
+
+/* ComboBox and TextField Disabled State */
+.text-field:disabled, .combo-box:disabled {
+    -fx-opacity: 0.5;                           /* Make text fields and combo boxes appear disabled */
+    -fx-background-color: #e0e0e0;              /* Light grey background for disabled state */
+}

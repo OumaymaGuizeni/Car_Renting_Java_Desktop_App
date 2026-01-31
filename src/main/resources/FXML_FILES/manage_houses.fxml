@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ManageHousesController" stylesheets="@styles/home.css" >
+
+    <!-- Background Image -->
+    <ImageView fx:id="backgroundImage" fitHeight="2500.0" fitWidth="2600.0" preserveRatio="false" layoutX="0.0" layoutY="0.0">
+        <image>
+            <Image url="@/src/Background.png" />
+        </image>
+    </ImageView> 
+
+    <!-- Logo Image -->
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Title -->
+    <Label layoutX="280.0" layoutY="20.0" text="Manage Houses" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Main Layout -->
+    <VBox layoutX="30.0" layoutY="100.0" spacing="20.0">
+        <children>
+            <!-- Form Section -->
+            <GridPane hgap="10.0" vgap="10.0">
+                <children>
+                    <!-- House ID -->
+                    <Label text="House ID:" style="-fx-font-size: 14px;" GridPane.rowIndex="0" />
+                    <TextField fx:id="txtHouseID" promptText="Enter House ID" prefWidth="150.0" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                    <!-- House Name -->
+                    <Label text="House Name:" style="-fx-font-size: 14px;" GridPane.rowIndex="1" />
+                    <TextField fx:id="txtName" promptText="Enter House Name" prefWidth="150.0" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                    <!-- Location -->
+                    <Label text="Location:" style="-fx-font-size: 14px;" GridPane.rowIndex="2" />
+                    <TextField fx:id="txtLocation" promptText="Enter House Location" prefWidth="150.0" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                    <!-- Rooms Available -->
+                    <Label text="Rooms Available:" style="-fx-font-size: 14px;" GridPane.rowIndex="3" />
+                    <TextField fx:id="txtRoomsAvailable" promptText="Enter Rooms Available" prefWidth="150.0" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                    <!-- Price Per Night -->
+                    <Label text="Price Per Days:" style="-fx-font-size: 14px;" GridPane.rowIndex="4" />
+                    <TextField fx:id="txtPricePerNight" promptText="Enter Price Per Days" prefWidth="150.0" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                    
+                    <!-- Reserved by our agency -->
+                    <Label text="Comment:" style="-fx-font-size: 14px;" GridPane.rowIndex="5" />
+                    <TextField fx:id="txtreserved_by_our_agency" promptText="Enter your comment" prefWidth="150.0" GridPane.rowIndex="5" GridPane.columnIndex="1" onMouseClicked="#handleTextFieldClick" />
+                   
+                    <!-- Full Capacity -->
+                    <Label text="Status:" style="-fx-font-size: 14px;" GridPane.rowIndex="6" />
+                    <ComboBox fx:id="txtFull_capacity" promptText="Rent /Not Rend" prefWidth="150.0" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+
+                    <!-- ComboBox for Available Houses -->
+                    <Label text="Available Houses:" style="-fx-font-size: 14px;" GridPane.rowIndex="7" />
+                    <ComboBox fx:id="comboBoxHouses" promptText="Select House" prefWidth="150.0" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+                </children>
+            </GridPane>
+
+            <!-- Buttons Section -->
+            <AnchorPane>
+                <!-- Add House Button -->
+                <Button onAction="#addHouse" text="Add House" prefWidth="130.0" layoutX="0.0" layoutY="15.0" 
+                        style="-fx-background-color:#4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+
+                <!-- Delete House Button -->
+                <Button onAction="#deleteHouse" text="Delete House" prefWidth="130.0" layoutX="150.0" layoutY="15.0" 
+                        style="-fx-background-color: #4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+                
+                
+                <Button onAction="#handleExportPdf" text="Export PDF" prefWidth="130.0" layoutX="0.0" layoutY="80.0" 
+                        style="-fx-background-color:#4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+
+
+                <Button onAction="#handleExportExcel" text="Export Excel" prefWidth="130.0" layoutX="150.0" layoutY="80.0" 
+                        style="-fx-background-color:#4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+                <!-- Update House Button -->
+                <Button onAction="#handleLogout" text="BACK" prefWidth="130.0" layoutX="0.0" layoutY="150.0" 
+                        style="-fx-background-color: #2196F3;  -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+                <!-- Logout Admin Button -->
+                <Button onAction="#Exit" text="Exit" prefWidth="130.0" layoutX="150.0" layoutY="150.0" 
+                        style="-fx-background-color:rgb(230, 55, 49); -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" />
+
+
+                
+            </AnchorPane>
+        </children>
+    </VBox>
+
+    <!-- Table View -->
+<TableView fx:id="TableID" layoutX="350.0" layoutY="100.0" prefHeight="500.0" prefWidth="500.0">
+    <columns>
+        <TableColumn fx:id="ColumnId" minWidth="30.0" prefWidth="30.0" maxWidth="30.0" text="ID" />
+        <TableColumn fx:id="ColumnName" minWidth="70.0" prefWidth="70.0" maxWidth="70.0" text="NOM" />
+        <TableColumn fx:id="ColumnLocation" minWidth="80.0" prefWidth="80.0" maxWidth="80.0" text="LOCATION" />
+        <TableColumn fx:id="ColumnRoomsavailable" minWidth="80.0" prefWidth="80.0" maxWidth="80.0" text="R.Available" />
+        <TableColumn fx:id="ColumnPriceperneight" minWidth="50.0" prefWidth="80.0" maxWidth="80.0" text="P.Days" />
+        <TableColumn fx:id="ColumnFullcapacity" minWidth="90.0" prefWidth="90.0" maxWidth="90.0" text="Status" />
+        <TableColumn fx:id="ColumnReservedByOurAgency" minWidth="80.0" prefWidth="80.0" maxWidth="80.0" text="Comment" />
+    </columns>
+</TableView>
+
+
+    <!-- Status Message -->
+    <Label fx:id="statusMessage" layoutX="20.0" layoutY="550.0" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+</AnchorPane>

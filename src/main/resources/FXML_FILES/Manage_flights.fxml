@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="665.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ManageFlightController">
+    <children>
+        <BorderPane prefHeight="681.0" prefWidth="900.0" style="-fx-background-color: d6b8d6;">
+            <top>
+                <HBox prefHeight="93.0" prefWidth="900.0" style="-fx-background-color: d6b8d6;" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="blinkingPlane" fitHeight="101.0" fitWidth="103.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" rotate="90.0" translateX="679.0" HBox.hgrow="NEVER">
+                            <image>
+                                <Image url="@../src/plane_icon.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust />
+                            </effect>
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                        </ImageView>
+                        <Text fx:id="blinkingWelcomeLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Manage Flight Space ! " textAlignment="JUSTIFY" translateX="-39.0" translateY="15.0">
+                            <font>
+                                <Font name="Garuda Bold" size="36.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox prefHeight="311.0" prefWidth="443.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="txtFlightNumber" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="443.0" promptText="Type Flight Number">
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtFlightDeparture" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="443.0" promptText="Type Flight Departure">
+                            <effect>
+                                <ColorAdjust />
+                            </effect>
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtFlightArrival" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="443.0" promptText="Type Flight Arrival">
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtSeatsAvailable" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="443.0" promptText="Type Number Of Seats">
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtFlightPrice" prefHeight="30.0" prefWidth="441.0" promptText="Type Flight Price">
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                        <ComboBox fx:id="comboBoxSearchFlights" prefHeight="26.0" prefWidth="517.0" promptText="Search Result" style="-fx-border-style: solid;" translateY="-1.0" />
+                        <HBox prefHeight="252.0" prefWidth="502.0" style="-fx-background-color: cc45cc; -fx-border-style: solid;" translateY="28.0">
+                            <children>
+                                <Text fx:id="CheckoutFlightsLabel" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout Available Flights" textAlignment="CENTER" translateX="16.0" translateY="1.0" wrappingWidth="440.7294921875">
+                                    <font>
+                                        <Font name="Garuda Bold" size="24.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="comboBoxAvailableFlights" prefHeight="26.0" prefWidth="517.0" promptText="Available Flights List" style="-fx-border-style: solid;" />
+                    </children>
+                </VBox>
+            </center>
+            <bottom>
+                <HBox prefHeight="283.0" prefWidth="900.0" style="-fx-background-color: d6b8d6;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#BACK" prefHeight="45.0" prefWidth="114.0" style="-fx-background-color: #2b179e;" text="Back" textAlignment="CENTER" textFill="#f2f2f2" textOverrun="CLIP" translateX="49.0" translateY="170.0">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="45.0" prefWidth="114.0" style="-fx-background-color: #2b179e;" text="Logout" textAlignment="CENTER" textFill="#f2f2f2" textOverrun="CLIP" translateX="-64.0" translateY="89.0">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="weatherLabel" alignment="CENTER" prefHeight="159.0" prefWidth="284.0" text="Weather" translateX="160.0" translateY="58.0">
+                            <font>
+                                <Font name="Garuda Oblique" size="21.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="timeLabel2" alignment="CENTER" prefHeight="45.0" prefWidth="139.0" text="Time" translateX="-59.0" translateY="12.0">
+                            <font>
+                                <Font name="Garuda Oblique" size="23.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </bottom>
+            <right>
+                <VBox prefHeight="410.0" prefWidth="184.0" style="-fx-background-color: d6b8d6;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#add" prefHeight="2.0" prefWidth="185.0" style="-fx-background-color: f0d8f0; -fx-border-style: solid;" text="Add Flight" textAlignment="CENTER" textOverrun="CLIP">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#delete" prefHeight="12.0" prefWidth="185.0" style="-fx-background-color: f0d8f0; -fx-border-style: solid;" text="Delete Flight" textAlignment="CENTER" textOverrun="CLIP">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#update" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: f0d8f0; -fx-border-style: solid;" text="Update Flight" textAlignment="CENTER" textOverrun="CLIP">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: f0d8f0; -fx-border-style: solid;" text="Search Flight" textAlignment="CENTER" textOverrun="CLIP" translateY="40.0">
+                            <font>
+                                <Font name="Garuda Bold Oblique" size="19.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="txtSearchField" prefHeight="22.0" prefWidth="184.0" promptText="Search by dep or arr" style="-fx-border-style: solid; -fx-background-color: white;" translateY="-36.0" />
+                        <Label fx:id="notFoundLabel" prefHeight="16.0" prefWidth="122.0" text="Search Not Found" translateX="29.0" translateY="31.0" />
+                    </children>
+                </VBox>
+            </right>
+            <left>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="221.0" prefWidth="238.0" style="-fx-background-color: f0d8f0;" translateY="-38.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="129.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" translateX="63.0" translateY="28.0">
+                            <image>
+                                <Image url="@../src/admin_icon.png" />
+                            </image>
+                        </ImageView>
+                        <TextField alignment="CENTER" editable="false" minWidth="-Infinity" prefHeight="45.0" prefWidth="125.0" text="Logged as ADMIN" translateX="-56.0" translateY="158.0">
+                            <font>
+                                <Font name="Garuda Bold" size="13.0" />
+                            </font>
+                        </TextField>
+                    </children></HBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

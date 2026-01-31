@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ManagerReservation">
+
+    <ImageView fitHeight="700.0" fitWidth="1000.0" layoutX="0.0" layoutY="0.0" preserveRatio="false">
+        <image>
+            <Image url="@/src/Background.png" />
+        </image>
+    </ImageView>
+
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0"
+               preserveRatio="true"
+               AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png" />
+        </image>
+    </ImageView>
+    <children>
+
+        <!-- TableView for Reservations -->
+        <TableView fx:id="TABLE_RESERVATION" layoutX="21.0" layoutY="67.0" prefHeight="449.0" prefWidth="1194.0">
+            <columns>
+                <TableColumn fx:id="ID" prefWidth="36.0" text="ID" />
+                <TableColumn fx:id="USER_NAME" prefWidth="187.0" text="USER_FULL_NAME" />
+                <TableColumn fx:id="USER_EMAIL" prefWidth="213.0" text="USER_EMAIL" />
+                <TableColumn fx:id="DATE_DEBUT" prefWidth="134.0" text="DATE_DEBUT" />
+                <TableColumn fx:id="DATE_FIN" prefWidth="129.0" text="DATE_FIN" />
+                <TableColumn fx:id="TYPE_RESERVATION" prefWidth="181.0" text="TYPE_RESERVATION" />
+                <TableColumn fx:id="PRICE_RESERVATION" prefWidth="157.0" text="Price Reservation" />
+                <TableColumn fx:id="nbrSeatsOrRooms" prefWidth="164.0" text="nbr Seats or Rooms" />
+            </columns>
+        </TableView>
+
+        <!-- Buttons -->
+        <Button layoutX="504.0" layoutY="537.0" mnemonicParsing="false" onAction="#DeletReservation" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FF6F61; -fx-font-size: 14px; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete Selected Reservation" />
+
+        <Button layoutX="1159.0" layoutY="646.0" mnemonicParsing="false" onAction="#BACK" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-background-radius: 5;" text="BACK" />
+
+        <Button fx:id="logout" layoutX="1023.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #f44336; -fx-font-size: 14px; -fx-text-fill: white; -fx-background-radius: 5;" text="Logout" />
+    </children>
+</AnchorPane>

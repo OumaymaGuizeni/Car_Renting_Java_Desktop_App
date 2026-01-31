@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ShowHotelsController" stylesheets="@styles/showhotelsstyle.css">
+    <children>
+        <!-- Background Image -->
+        <ImageView fx:id="backgroundImage" fitHeight="2800.0" fitWidth="10000.0" layoutX="0.0" layoutY="0.0" preserveRatio="false">
+            <image>
+                <Image url="@/src/Background.png" />
+            </image>
+        </ImageView>
+
+        <!-- Logo Image -->
+        <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="10.0" preserveRatio="true">
+            <image>
+                <Image url="@/src/logo.png" />
+            </image>
+        </ImageView>
+
+        <!-- Table View -->
+        <TableView fx:id="TableID" layoutX="25.0" layoutY="117.0" prefHeight="468.0" prefWidth="844.0">
+            <columns>
+                <TableColumn fx:id="ColumnId" prefWidth="57.0" text="ID" />
+                <TableColumn fx:id="ColumnName" minWidth="9.0" prefWidth="134.0" text="NOM" />
+                <TableColumn fx:id="ColumnLocation" prefWidth="137.0" text="LOCATION" />
+                <TableColumn fx:id="ColumnRoomsavailable" minWidth="0.0" prefWidth="129.0" text="Rooms_Available" />
+                <TableColumn fx:id="ColumnPriceperneight" minWidth="0.0" prefWidth="129.0" text="Price_Per_Night" />
+                <TableColumn fx:id="ColumnFullcapacity" minWidth="0.0" prefWidth="129.0" text="Hotel Full Capacity" />
+                <TableColumn fx:id="ColumnReservedByOurAgency" minWidth="0.0" prefWidth="129.0" text="Rooms Reserved by Our Agency" />
+            </columns>
+        </TableView>
+
+        <!-- Delete Selected Hotel -->
+        <Button fx:id="DeleteSelected_hotel" layoutX="25.0" layoutY="625.0" mnemonicParsing="false" onAction="#DeletSlectedhotel" prefWidth="220.0" style="-fx-background-color:rgb(12, 173, 236); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Delete Selected Hotel" />
+
+        <!-- Delete Selected Hotel -->
+        <Button fx:id="statsButton" layoutX="289.0" layoutY="625.0" mnemonicParsing="false" onAction="#viewStatistics" prefWidth="180.0" style="-fx-background-color:rgb(12, 173, 236); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="View Statistics" />
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="724.0" layoutY="625.0" mnemonicParsing="false" onAction="#BACK" prefWidth="150.0" style="-fx-background-color:rgb(12, 173, 236); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="BACK" />
+        
+        <!-- Export Data Button -->
+        <Button fx:id="Exportdata" layoutX="513.0" layoutY="625.0" mnemonicParsing="false" onAction="#Exportdata" prefWidth="180.0" style="-fx-background-color:rgb(12, 173, 236); -fx-font-size: 16px; -fx-text-fill: white;                       -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Export Data" />
+      <ComboBox fx:id="filterComboBox" layoutX="627.0" layoutY="73.0" prefHeight="24.0" prefWidth="229.0" promptText="Filter By" />
+      <ComboBox fx:id="searchTypeComboBox" layoutX="25.0" layoutY="73.0" prefHeight="24.0" prefWidth="180.0" />
+      <TextField fx:id="searchTextField" layoutX="213.0" layoutY="73.0" prefHeight="24.0" prefWidth="247.0" />
+      <Button fx:id="clearSearchButton" layoutX="469.0" layoutY="73.0" mnemonicParsing="false" onAction="#clearSearch" prefHeight="24.0" prefWidth="63.0" text="Reset" />
+    </children>
+</AnchorPane>

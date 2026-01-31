@@ -1,6 +1,6 @@
 Manager Renting Car Agency
 
-Created on 11 oct 14:04
+Created on 30 jan 11:04
 Project Overview
 
 Manager Renting Car Agency is a Java-based application designed to efficiently manage car rental agencies. The system allows for the management of rental vehicles, customer information, reservations, and billing processes, aiming to streamline agency operations and enhance user experience.

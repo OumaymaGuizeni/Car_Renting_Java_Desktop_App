@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User_controllers.HouseReservationController" stylesheets="@styles/home.css" >
+    <children>
+
+        <!-- Main Layout with Background -->
+        <VBox fx:id="mainVBox" spacing="20" 
+              style="-fx-padding: 40; 
+                     -fx-background-color: #f9f9f9; 
+                     -fx-background-image: url('/src/Background.png');
+                     -fx-background-position: center center; 
+                     -fx-background-repeat: no-repeat; 
+                     -fx-background-size: cover;"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+            
+            <!-- Empty space to allow buttons to be placed manually with layoutX and layoutY -->
+            <AnchorPane>
+                <!-- Back Button with layoutX and layoutY -->
+                <Button onAction="#BACK" text="Back" prefWidth="250.0" 
+            style="-fx-font-size: 16px;                      -fx-background-color: #2196F3;                      -fx-text-fill: white;                                                          -fx-padding: 10px 20px;                      -fx-background-radius: 5;"
+                        layoutX="0.0" layoutY="600.0" />
+            
+                <!-- Exit Button with layoutX and layoutY -->
+                <Button onAction="#Exit" text="Exit" prefWidth="250.0" 
+                style="-fx-font-size: 16px; -fx-background-color: #f44336; -fx-text-fill: white;                                     -fx-padding: 10px 20px; -fx-background-radius: 5;"
+                layoutX="650.0" layoutY="600.0" />
+            </AnchorPane>
+        </VBox>
+
+        <TableView fx:id="tableHouses" layoutX="200.0" layoutY="225.0" prefHeight="180.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="columnId" text="ID" visible="false" />
+                <TableColumn fx:id="columnName" text="Name" />
+                <TableColumn fx:id="columnLocation" text="Location" />
+                <TableColumn fx:id="columnRoomsAvailable" text="Rooms Available" />
+                <TableColumn fx:id="columnPricePerNight" text="Price Per Night" />
+                <TableColumn fx:id="columnFullCapacity" text="Status" visible="false"/>
+                <TableColumn fx:id="columnViewButton" text="View Details" />
+                <TableColumn fx:id="columnRentButton" text="Rent" />
+                <TableColumn fx:id="columnReservedByOurAgency" text="Comment" visible="false" />
+            </columns>
+        </TableView>
+            <TableView fx:id="Tablereservations" layoutX="200.0" layoutY="450.0" prefHeight="150.0" prefWidth="600.0" >
+                <columns>
+                    <TableColumn fx:id="Type_Reservations" text="Type de Réservation" prefWidth="150.0" />
+                    <TableColumn fx:id="Start_Dates" text="Date de Début" prefWidth="150.0" />
+                    <TableColumn fx:id="End_Dates" text="Date de Fin" prefWidth="150.0" />
+                    <TableColumn fx:id="TotaleCost" text="Prix Total" prefWidth="150.0" />
+                </columns>
+            </TableView>
+
+<Button layoutX="150.0" layoutY="300.0" prefWidth="50.0" prefHeight="50.0" 
+        onAction="#ShowMyreservation" 
+        style="-fx-background-color: transparent; 
+               -fx-padding: 0;">
+    <graphic>
+        <ImageView fitWidth="40.0" fitHeight="40.0" 
+                   pickOnBounds="true" 
+                   preserveRatio="true">
+            <image>
+                <Image url="@/src/show.png" />
+            </image>
+        </ImageView>
+    </graphic>
+</Button>
+
+
+<Button layoutX="150.0" layoutY="350.0" prefWidth="50.0" prefHeight="50.0" 
+        onAction="#hideTable" 
+        style="-fx-background-color: transparent; 
+               -fx-padding: 0;">
+    <graphic>
+        <ImageView fitWidth="40.0" fitHeight="40.0" 
+                   pickOnBounds="true" 
+                   preserveRatio="true">
+            <image>
+                <Image url="@/src/hide.png" />
+            </image>
+        </ImageView>
+    </graphic>
+</Button>
+
+
+    </children>
+    <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png" />
+        </image>
+    </ImageView>
+        <!-- Logo Image -->
+        <ImageView fitHeight="135.0" fitWidth="135.0" 
+                   preserveRatio="true" 
+                   layoutX="435.0" layoutY="55.0">
+            <image>
+                <Image url="@/src/housepng.png" />
+            </image>
+        </ImageView>
+</AnchorPane>

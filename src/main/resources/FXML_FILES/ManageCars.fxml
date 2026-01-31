@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Admin_controllers.ManageCarsController">
+
+   <!-- Background Image -->
+   <ImageView fitHeight="2500.0" fitWidth="2600.0" layoutX="0.0" layoutY="0.0" preserveRatio="false">
+      <image>
+         <Image url="@/src/Background.png" />
+      </image>
+   </ImageView>
+
+   <!-- Logo Image -->
+   <ImageView fx:id="logoImage" fitHeight="100.0" fitWidth="100.0" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <image>
+         <Image url="@/src/logo.png" />
+      </image>
+   </ImageView>
+
+   <children>
+      <!-- Title -->
+      <Label layoutX="280.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Car Management" />
+
+      <!-- Left Section: Car Details Form -->
+      <VBox layoutX="50.0" layoutY="108.0" spacing="10.0">
+         <children>
+            <Label text="Brand" />
+            <TextField fx:id="txtBrand" promptText="Enter Brand" />
+
+            <Label text="Model" />
+            <TextField fx:id="txtModel" promptText="Enter Model" />
+
+            <Label text="Fuel Type" />
+            <TextField fx:id="txtFuelType" promptText="Enter Fuel Type" />
+
+            <Label text="Registration" />
+            <TextField fx:id="txtRegistration" promptText="Enter Registration Number" />
+
+            <Label text="Daily Price" />
+            <TextField fx:id="txtDailyPrice" promptText="Enter Daily Price" />
+
+            <!-- Add Car Button -->
+            <Button onAction="#addCar" style="-fx-background-color: #4CAF50; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Add Car" translateX="40.0" />
+         </children>
+      </VBox>
+
+      <!-- Right Section: Image and Action Buttons -->
+      <VBox alignment="CENTER" layoutX="700.0" layoutY="501.0" spacing="20.0">
+         <children>
+            <!-- Display Image -->
+            <ImageView fitHeight="200.0" fitWidth="200.0" preserveRatio="true">
+               <Image url="@/src/manage_cars.png" />
+            </ImageView>
+         </children>
+      </VBox>
+
+      <!-- Logout Button -->
+      <Button layoutX="511.0" layoutY="662.0" onAction="#handleLogout" style="-fx-background-color: #f44336; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Logout" />
+
+      <!-- Back Button -->
+      <Button layoutX="623.0" layoutY="662.0" onAction="#BACK" style="-fx-background-color: #2196F3; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Back" />
+
+      <!-- Car Table -->
+      <TableView fx:id="TableCars" layoutX="228.0" layoutY="106.0" prefHeight="377.0" prefWidth="661.0">
+         <columns>
+            <TableColumn fx:id="IDcar" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="Brand" prefWidth="94.0" text="Brand" />
+            <TableColumn fx:id="Model" prefWidth="78.0" text="Model" />
+            <TableColumn fx:id="Availability" prefWidth="91.0" text="Availability" />
+            <TableColumn fx:id="registration" prefWidth="102.0" text="Registration" />
+            <TableColumn fx:id="FuelType" prefWidth="89.0" text="Fuel Type" />
+            <TableColumn fx:id="DailyPrice" prefWidth="131.0" text="Daily Price" />
+         </columns>
+      </TableView>
+
+      <!-- Delete Selected Car -->
+      <Button layoutX="458.0" layoutY="489.0" onAction="#DeletSlectionCar" style="-fx-background-color: #FF9800; -fx-font-size: 14px; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5;" text="Delete Selected Car" />
+
+      <!-- Search Type Dropdown -->
+      <ComboBox fx:id="SearchType" layoutX="227.0" layoutY="76.0" prefWidth="150.0" promptText="Search Type" />
+
+      <!-- Search Text Field -->
+      <TextField fx:id="SearchText" layoutX="396.0" layoutY="76.0" promptText="Search Word" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+{
+    "username": "sa",
+    "password": "",
+    "url": "jdbc:h2:./data/car_rental_db;MODE=Oracle"
+}

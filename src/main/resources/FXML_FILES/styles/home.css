@@ -1,0 +1,15 @@
+.button:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-cursor: hand; /* Change le curseur pour indiquer que c'est cliquable */
+    -fx-border-color: #2196F3; /* Optionnel : changer la bordure au survol */
+}
+.text-field:hover, .text-area:hover {
+    -fx-scale-x: 1.05; /* Agrandit horizontalement de 10% */
+    -fx-scale-y: 1.05; /* Agrandit verticalement de 10% */
+    -fx-cursor: hand; /* Change le curseur pour indiquer l'interactivité */
+    -fx-border-color: #4CAF50; /* Optionnel : changer la bordure au survol */
+    -fx-border-width: 2px; /* Épaissir la bordure au survol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0); /* Optionnel : ajoute une ombre */
+}
+

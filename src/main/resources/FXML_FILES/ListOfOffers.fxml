@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.Admin_controllers.CheckCurrentOffers"
+      spacing="20" alignment="CENTER" prefWidth="800" prefHeight="600"
+      stylesheets="@styles.css" styleClass="root">
+
+    <!-- Header Section -->
+    <Label text="Current Special Offers" styleClass="header-label" />
+
+    <!-- Table for Displaying Offers -->
+    <TableView fx:id="offersTable" styleClass="table-view" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="offerNameColumn" text="Offer Name" styleClass="table-column" />
+            <TableColumn fx:id="discountColumn" text="Discount (%)" styleClass="table-column" />
+            <TableColumn fx:id="startDateColumn" text="Start Date" styleClass="table-column" />
+            <TableColumn fx:id="endDateColumn" text="End Date" styleClass="table-column" />
+            <TableColumn fx:id="itemsColumn" text="Items" styleClass="table-column" />
+            <TableColumn fx:id="availibilityColumn" text="Availability" styleClass="table-column" />
+        </columns>
+    </TableView>
+
+    <!-- Action Buttons -->
+    <HBox spacing="20" alignment="CENTER" styleClass="button-container">
+        <Button text="Back" fx:id="back" onAction="#BACK" styleClass="back-button" />
+        <Button text="Delete Offer" fx:id="deleteOfferButton" onAction="#handleDeleteOffer" styleClass="delete-button" />
+    </HBox>
+
+</VBox>

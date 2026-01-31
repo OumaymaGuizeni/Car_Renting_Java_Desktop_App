@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.Admin_controllers.AdminDashboardController" stylesheets="@styles/admin_Dashboard_style.css">
+        <ImageView fitHeight="4500.0" fitWidth="4600.0" preserveRatio="false">
+            <image>
+                <Image url="@/src/Background.png" />
+            </image>
+        </ImageView>
+    <children>
+        <!-- Background -->
+            <!-- Buttons -->
+      <Button fx:id="MangingCars" layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onAction="#MangingCars" prefWidth="300.0" text="Manage Cars" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+      <Button fx:id="MangeHotels" layoutX="500.0" layoutY="300.0" mnemonicParsing="false" onAction="#MangeHotels" prefWidth="300.0" text="Manage Hotels" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+      <Button fx:id="ManageFlights" layoutX="100.0" layoutY="375.0" mnemonicParsing="false" onAction="#ManageFlights" prefWidth="300.0" text="Manage Flights" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+      <Button fx:id="Mangespecialoffers" layoutX="500.0" layoutY="375.0" mnemonicParsing="false" onAction="#Mangespecialoffers" prefWidth="300.0" text="Manage Special Offers" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+                     
+      <Button fx:id="MangeUsers" layoutX="100.0" layoutY="450.0" mnemonicParsing="false" onAction="#MangeUsers" prefWidth="300.0" text="Manage Users" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+      <Button fx:id="MangeHouses" layoutX="500.0" layoutY="450.0" mnemonicParsing="false" onAction="#MangeHouses" prefWidth="300.0" text="Manage Houses" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+      <Button fx:id="MangeReservations" layoutX="300.0" layoutY="525.0" mnemonicParsing="false" onAction="#MangeReservations" prefWidth="300.0" text="Manage Reservations" 
+            style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white; 
+                     -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+  <ImageView fx:id="logoImage" fitHeight="175.0" fitWidth="175.0" preserveRatio="true"
+               AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="100.0">
+        <image>
+            <Image url="@/src/admin_icon.png"/>
+        </image>
+    </ImageView>
+
+
+   <Button layoutX="600.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="200.0" text="Exit" 
+         style="-fx-font-size: 16px; -fx-background-color:rgb(236, 96, 108); -fx-text-fill: white; 
+                  -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+
+
+   <Button fx:id="handleLogoutAdmin" layoutX="100.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleLogout" prefWidth="200.0" text="Logout Admin" 
+         style="-fx-font-size: 16px; -fx-background-color:rgb(106, 152, 221); -fx-text-fill: white; 
+                  -fx-padding: 10px 20px; -fx-background-radius: 5;"/>
+    <ImageView fx:id="logoImage" fitHeight="125.0" fitWidth="125.0" preserveRatio="true"
+               AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <image>
+            <Image url="@/src/logo.png"/>
+        </image>
+    </ImageView>
+        
+
+<Button fx:id="helpButton" onAction="#handleHelp" 
+        style="-fx-background-color: transparent; -fx-border-width: 0;" 
+        AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+    <graphic>
+        <ImageView fx:id="helpImage" fitHeight="25.0" fitWidth="25.0" preserveRatio="true">
+            <image>
+                <Image url="@/src/help_icon.png"/>
+            </image>
+        </ImageView>
+    </graphic>
+</Button>
+    </children>
+</AnchorPane>

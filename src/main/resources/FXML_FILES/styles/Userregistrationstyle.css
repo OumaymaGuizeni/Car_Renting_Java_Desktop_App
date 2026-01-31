@@ -1,0 +1,157 @@
+/* General Styles */
+* {
+    -fx-font-family: "Noto Sans Mono CJK HK", sans-serif;
+    -fx-font-size: 20px; /* Increased font size to 14px */
+    -fx-base: #f4f4f4;
+}
+
+/* Background Color for the AnchorPane */
+AnchorPane {
+    -fx-background-color: #f4f4f4;
+}
+
+/* Header section */
+.AnchorPane {
+    -fx-background-color: #e8763c;
+}
+
+/* Logo Image */
+#logoImage {
+    -fx-fit-height: 32px;
+    -fx-fit-width: 165px;
+    -fx-preserve-ratio: true;
+}
+
+/* Title Text */
+#UserRegistrationLabel {
+    -fx-font-size: 33px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "DejaVuMathTeXGyre-Regular", sans-serif;
+}
+
+/* Fields (TextField, PasswordField) */
+.text-field, .password-field {
+    -fx-font-size: 14px;  /* Font size 14px */
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+}
+
+/* Focused State for Fields */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #07a30c; /* Green on focus */
+}
+
+/* Labels Styling */
+.label {
+    -fx-font-size: 24px;  /* Increased font size to 14px */
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+}
+
+/* Specific Labels */
+#FirstNameLabel, #LastNameLabel, #AddressLabel, #EmailLabel, #PasswordLabel, #ConfirmPasswordLabel {
+    -fx-font-size: 24px;  /* Increased font size to 14px */
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Button Styling */
+.button {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 2px 10px;
+    -fx-background-color: #07a30c; /* Green for primary buttons */
+    -fx-border-radius: 5px;
+    -fx-transition: all 0.3s ease; /* Smooth transition for hover animation */
+}
+
+/* Hover effect for Buttons */
+.button:hover {
+    -fx-background-color: #3fa03a;  /* Slightly lighter green */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;  /* Slightly scale up the button */
+    -fx-opacity: 0.9;
+}
+
+/* Button for Exit */
+#EXIT {
+    -fx-background-color: #fc1c32; /* Red for EXIT button */
+}
+
+/* Button for "Create New Account" */
+#CreateAccount {
+    -fx-background-color: #07a30c;
+}
+
+/* Map Section */
+.AnchorPane {
+    -fx-background-color: #cef5de;
+}
+
+/* Map Section Labels */
+#YourLocationLabel, #TimezoneLabel, #LatitudeLabel, #LongitudeLabel {
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+}
+
+/* Map Section Values (Timezone, Latitude, Longitude) */
+#timezoneLabel, #latLabel, #lonLabel {
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+}
+
+/* Map Button */
+#openMapButton {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Google Maps Image inside Button */
+#helpImage {
+    -fx-fit-height: 50px;
+    -fx-fit-width: 230px;
+    -fx-preserve-ratio: true;
+}
+
+/* Spacing for Map Section */
+#mapSection {
+    -fx-spacing: 10px;
+}
+
+/* Adding Padding to the Overall Form */
+.AnchorPane {
+    -fx-padding: 20px;
+}
+
+/* Ensure Proper Layout Spacing */
+.Label, .text-field, .password-field, .button {
+    -fx-margin-bottom: 10px;
+}
+
+/* Center Align Text Inside Labels */
+.Label {
+    -fx-alignment: center-left;
+}
+
+/* Alignment for Image View */
+.ImageView {
+    -fx-alignment: center;
+}
+
+/* Style the Labels with Larger Fonts */
+.Label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #333;
+}
+
+/* Header Section Styles */
+#headerSection {
+    -fx-background-color: #e8763c;
+    -fx-padding: 10px;
+}

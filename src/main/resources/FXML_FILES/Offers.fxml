@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-image: url('../src/Background.png');                    -fx-background-position: center center;                     -fx-background-repeat: no-repeat;                     -fx-background-size: cover;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User_controllers.OffersController">
+    <children>
+        <!-- Back Button with enhanced style -->
+        <Button layoutX="713.0" layoutY="534.0" onAction="#BACK" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;                         -fx-background-color: rgba(0, 0, 0, 0.7); -fx-padding: 10px 20px; -fx-border-radius: 5px;" text="Back to Home">
+            <font>
+                <Font size="12.0" />
+            </font></Button>
+        <ComboBox fx:id="ComboxSpecialOffer" layoutX="271.0" layoutY="74.0" prefHeight="24.0" prefWidth="558.0" />
+       <Label fx:id="Offer_Type" layoutX="271.0" layoutY="139.0" text="Offer Type :" />
+        <Label fx:id="discount" layoutX="271.0" layoutY="170.0" text="Discount Percentage :" />
+        <Label fx:id="Prices" layoutX="272.0" layoutY="198.0" text="Price :" />
+        <Label fx:id="Offer_Date" layoutX="272.0" layoutY="230.0" text="Offer Date :" />
+        <ComboBox fx:id="PaymentType" layoutX="386.0" layoutY="261.0" prefHeight="26.0" prefWidth="154.0" />
+        <Button layoutX="271.0" layoutY="302.0" mnemonicParsing="false" onAction="#RentOfferSpecial" text="Reserve Now" />
+      <Label layoutX="135.0" layoutY="78.0" text="Choose Special Offer" />
+      <Label layoutX="271.0" layoutY="266.0" text="Payment Type" />
+    </children>
+</AnchorPane>
